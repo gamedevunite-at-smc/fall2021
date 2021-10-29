@@ -1,6 +1,6 @@
 Isometric Packman
 
--Isometric
--Packman can jump of ledges down the mountain to run from the ghousts
+-Isometric.
+-Packman can jump of ledges down the mountain to run from the ghousts.
 
--Packman can go to the edge of the mountain and the camera turns and faces the next side of the mountain
+-Packman can go to the edge of the mountain and the camera turns and faces the next side of the mountain.
