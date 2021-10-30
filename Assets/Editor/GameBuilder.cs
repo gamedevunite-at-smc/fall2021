@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 
-public class GameBuilder : MonoBehaviour {
+public static class GameBuilder {
     [MenuItem("Custom/Build Windows64")]
 	public static void MyBuild() {
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
