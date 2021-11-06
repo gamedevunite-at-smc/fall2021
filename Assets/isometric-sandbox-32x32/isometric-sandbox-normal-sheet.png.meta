@@ -1,157 +1,157 @@
 fileFormatVersion: 2
-guid: 37f852a8517ea0e4eb4fa80eea9da17b
+guid: f9c572b8c3c24b24890a0a800478a5a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8481478280820386278
-    second: isometric-sandbox-sheet_0
+      213: 6265835435153952485
+    second: isometric-sandbox-normal-sheet_0
   - first:
-      213: -1790496041286448372
-    second: isometric-sandbox-sheet_1
+      213: -3047386680064792916
+    second: isometric-sandbox-normal-sheet_1
   - first:
-      213: 6473105699162339919
-    second: isometric-sandbox-sheet_2
+      213: 5935337220331600686
+    second: isometric-sandbox-normal-sheet_2
   - first:
-      213: -4883559193947404430
-    second: isometric-sandbox-sheet_3
+      213: -3345660672719951634
+    second: isometric-sandbox-normal-sheet_3
   - first:
-      213: 8171703395083487096
-    second: isometric-sandbox-sheet_4
+      213: -2054629388765054902
+    second: isometric-sandbox-normal-sheet_4
   - first:
-      213: 1491317778495171342
-    second: isometric-sandbox-sheet_5
+      213: 5108040752927816732
+    second: isometric-sandbox-normal-sheet_5
   - first:
-      213: 7406942866699060643
-    second: isometric-sandbox-sheet_6
+      213: 2423479559356470518
+    second: isometric-sandbox-normal-sheet_6
   - first:
-      213: -4651743224811137498
-    second: isometric-sandbox-sheet_7
+      213: -8657888831029165510
+    second: isometric-sandbox-normal-sheet_7
   - first:
-      213: -32259223243999420
-    second: isometric-sandbox-sheet_8
+      213: 5395408697583070763
+    second: isometric-sandbox-normal-sheet_8
   - first:
-      213: 4852371717203241939
-    second: isometric-sandbox-sheet_9
+      213: 449271065364783121
+    second: isometric-sandbox-normal-sheet_9
   - first:
-      213: -2503174712574607662
-    second: isometric-sandbox-sheet_10
+      213: -3530877632496260249
+    second: isometric-sandbox-normal-sheet_10
   - first:
-      213: -5858830526876700435
-    second: isometric-sandbox-sheet_11
+      213: 7859467181024617188
+    second: isometric-sandbox-normal-sheet_11
   - first:
-      213: -294623404499593757
-    second: isometric-sandbox-sheet_12
+      213: 5740727429396979498
+    second: isometric-sandbox-normal-sheet_12
   - first:
-      213: 784767542358287471
-    second: isometric-sandbox-sheet_13
+      213: -5827120413615491246
+    second: isometric-sandbox-normal-sheet_13
   - first:
-      213: -6057599561553331162
-    second: isometric-sandbox-sheet_14
+      213: -4785539696907110936
+    second: isometric-sandbox-normal-sheet_14
   - first:
-      213: -5729907130241020367
-    second: isometric-sandbox-sheet_15
+      213: -6031332494359635644
+    second: isometric-sandbox-normal-sheet_15
   - first:
-      213: 6894821472820148820
-    second: isometric-sandbox-sheet_16
+      213: 2144827710868626646
+    second: isometric-sandbox-normal-sheet_16
   - first:
-      213: 5534681296388698498
-    second: isometric-sandbox-sheet_17
+      213: -6914043427469521627
+    second: isometric-sandbox-normal-sheet_17
   - first:
-      213: -2496026009614351048
-    second: isometric-sandbox-sheet_18
+      213: 2918968192207836343
+    second: isometric-sandbox-normal-sheet_18
   - first:
-      213: -3172018490288821287
-    second: isometric-sandbox-sheet_19
+      213: -232743144573925064
+    second: isometric-sandbox-normal-sheet_19
   - first:
-      213: -4387242004135629611
-    second: isometric-sandbox-sheet_20
+      213: 6838239266338117807
+    second: isometric-sandbox-normal-sheet_20
   - first:
-      213: -6396220585416759441
-    second: isometric-sandbox-sheet_21
+      213: -1166343552864128904
+    second: isometric-sandbox-normal-sheet_21
   - first:
-      213: 1061797665874830684
-    second: isometric-sandbox-sheet_22
+      213: 8764518331494139633
+    second: isometric-sandbox-normal-sheet_22
   - first:
-      213: 6958618980291211874
-    second: isometric-sandbox-sheet_23
+      213: -6238980446155665651
+    second: isometric-sandbox-normal-sheet_23
   - first:
-      213: -8434918555552693597
-    second: isometric-sandbox-sheet_24
+      213: -2230599434556125959
+    second: isometric-sandbox-normal-sheet_24
   - first:
-      213: 5934967756967661825
-    second: isometric-sandbox-sheet_25
+      213: 1488176565486914166
+    second: isometric-sandbox-normal-sheet_25
   - first:
-      213: 3794822353423843309
-    second: isometric-sandbox-sheet_26
+      213: -4725166659609278446
+    second: isometric-sandbox-normal-sheet_26
   - first:
-      213: -2584930587165476914
-    second: isometric-sandbox-sheet_27
+      213: 433346699388139330
+    second: isometric-sandbox-normal-sheet_27
   - first:
-      213: -7962160311866519678
-    second: isometric-sandbox-sheet_28
+      213: -5660023169701778737
+    second: isometric-sandbox-normal-sheet_28
   - first:
-      213: 3880769265254159746
-    second: isometric-sandbox-sheet_29
+      213: 1186191018657421967
+    second: isometric-sandbox-normal-sheet_29
   - first:
-      213: 5520458427862139682
-    second: isometric-sandbox-sheet_30
+      213: -2420136293058863539
+    second: isometric-sandbox-normal-sheet_30
   - first:
-      213: -2303613885661302336
-    second: isometric-sandbox-sheet_31
+      213: 1561808352307160606
+    second: isometric-sandbox-normal-sheet_31
   - first:
-      213: -5137505262064535012
-    second: isometric-sandbox-sheet_32
+      213: 5143348506319979706
+    second: isometric-sandbox-normal-sheet_32
   - first:
-      213: -4739093304971887954
-    second: isometric-sandbox-sheet_33
+      213: -6869677290727434696
+    second: isometric-sandbox-normal-sheet_33
   - first:
-      213: 8132028047737714363
-    second: isometric-sandbox-sheet_34
+      213: -1892168072962731961
+    second: isometric-sandbox-normal-sheet_34
   - first:
-      213: 1993680869665351562
-    second: isometric-sandbox-sheet_35
+      213: 2145973395897113088
+    second: isometric-sandbox-normal-sheet_35
   - first:
-      213: 4451379804484431703
-    second: isometric-sandbox-sheet_36
+      213: -3389168466287722260
+    second: isometric-sandbox-normal-sheet_36
   - first:
-      213: -2172622567018227624
-    second: isometric-sandbox-sheet_37
+      213: 3543700486688883934
+    second: isometric-sandbox-normal-sheet_37
   - first:
-      213: 6328888798690473336
-    second: isometric-sandbox-sheet_38
+      213: 3067807017299828620
+    second: isometric-sandbox-normal-sheet_38
   - first:
-      213: 5555067302127474507
-    second: isometric-sandbox-sheet_39
+      213: 4140192510085313112
+    second: isometric-sandbox-normal-sheet_39
   - first:
-      213: -899132276013293220
-    second: isometric-sandbox-sheet_40
+      213: 3864742041889219908
+    second: isometric-sandbox-normal-sheet_40
   - first:
-      213: -8699920802524130232
-    second: isometric-sandbox-sheet_41
+      213: 2294166419895131664
+    second: isometric-sandbox-normal-sheet_41
   - first:
-      213: -8985391083318258871
-    second: isometric-sandbox-sheet_42
+      213: 7739757487145567328
+    second: isometric-sandbox-normal-sheet_42
   - first:
-      213: -2138464223554764839
-    second: isometric-sandbox-sheet_43
+      213: -1238272374458519288
+    second: isometric-sandbox-normal-sheet_43
   - first:
-      213: 7404252929373577187
-    second: isometric-sandbox-sheet_44
+      213: 4918342016173386453
+    second: isometric-sandbox-normal-sheet_44
   - first:
-      213: -8653689655477812521
-    second: isometric-sandbox-sheet_45
+      213: -90679376133687262
+    second: isometric-sandbox-normal-sheet_45
   - first:
-      213: 3359966938341595273
-    second: isometric-sandbox-sheet_46
+      213: -2603378561795830597
+    second: isometric-sandbox-normal-sheet_46
   - first:
-      213: -3937030939122347924
-    second: isometric-sandbox-sheet_47
+      213: 5761148231803879114
+    second: isometric-sandbox-normal-sheet_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -179,8 +179,8 @@ TextureImporter:
     filterMode: 0
     aniso: 2
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
+    wrapU: 0
+    wrapV: 0
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -194,9 +194,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -271,7 +271,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_0
+      name: isometric-sandbox-normal-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -285,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a16928db07cbb4a80800000000000000
-      internalID: -8481478280820386278
+      spriteID: 5ee08656128b4f650800000000000000
+      internalID: 6265835435153952485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_1
+      name: isometric-sandbox-normal-sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -306,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0bc06f3651e627e0800000000000000
-      internalID: -1790496041286448372
+      spriteID: ca62b71d5f185b5d0800000000000000
+      internalID: -3047386680064792916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_2
+      name: isometric-sandbox-normal-sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -327,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4ab020665715d950800000000000000
-      internalID: 6473105699162339919
+      spriteID: e2bf40051cd8e5250800000000000000
+      internalID: 5935337220331600686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_3
+      name: isometric-sandbox-normal-sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -348,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2770c2d89cc1a3cb0800000000000000
-      internalID: -4883559193947404430
+      spriteID: ee8688f1853d191d0800000000000000
+      internalID: -3345660672719951634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_4
+      name: isometric-sandbox-normal-sheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -369,14 +369,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8770ec931f8b76170800000000000000
-      internalID: 8171703395083487096
+      spriteID: a48b491f47d7c73e0800000000000000
+      internalID: -2054629388765054902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_5
+      name: isometric-sandbox-normal-sheet_5
       rect:
         serializedVersion: 2
         x: 160
@@ -390,14 +390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bed624e9932b410800000000000000
-      internalID: 1491317778495171342
+      spriteID: c1c3b70500863e640800000000000000
+      internalID: 5108040752927816732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_6
+      name: isometric-sandbox-normal-sheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -411,14 +411,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a506392b4fbac660800000000000000
-      internalID: 7406942866699060643
+      spriteID: 6f4dcdfa1dde1a120800000000000000
+      internalID: 2423479559356470518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_7
+      name: isometric-sandbox-normal-sheet_7
       rect:
         serializedVersion: 2
         x: 32
@@ -432,14 +432,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6265dcade20b17fb0800000000000000
-      internalID: -4651743224811137498
+      spriteID: a324fa9cafff8d780800000000000000
+      internalID: -8657888831029165510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_8
+      name: isometric-sandbox-normal-sheet_8
       rect:
         serializedVersion: 2
         x: 64
@@ -453,14 +453,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 447bfc948646d8ff0800000000000000
-      internalID: -32259223243999420
+      spriteID: b2eed75df9750ea40800000000000000
+      internalID: 5395408697583070763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_9
+      name: isometric-sandbox-normal-sheet_9
       rect:
         serializedVersion: 2
         x: 96
@@ -474,14 +474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db2d0a2e56175340800000000000000
-      internalID: 4852371717203241939
+      spriteID: 110ede257a12c3600800000000000000
+      internalID: 449271065364783121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_10
+      name: isometric-sandbox-normal-sheet_10
       rect:
         serializedVersion: 2
         x: 128
@@ -495,14 +495,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2deff3e7cdfe24dd0800000000000000
-      internalID: -2503174712574607662
+      spriteID: 76b20b9208dcffec0800000000000000
+      internalID: -3530877632496260249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_11
+      name: isometric-sandbox-normal-sheet_11
       rect:
         serializedVersion: 2
         x: 160
@@ -516,14 +516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de0bc4e5da041bea0800000000000000
-      internalID: -5858830526876700435
+      spriteID: 4e220d882cf621d60800000000000000
+      internalID: 7859467181024617188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_12
+      name: isometric-sandbox-normal-sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -537,14 +537,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e51948139949ebf0800000000000000
-      internalID: -294623404499593757
+      spriteID: a2f5c8d6e292baf40800000000000000
+      internalID: 5740727429396979498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_13
+      name: isometric-sandbox-normal-sheet_13
       rect:
         serializedVersion: 2
         x: 32
@@ -558,14 +558,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f64a5810ced04ea00800000000000000
-      internalID: 784767542358287471
+      spriteID: 25775037bd8e12fa0800000000000000
+      internalID: -5827120413615491246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_14
+      name: isometric-sandbox-normal-sheet_14
       rect:
         serializedVersion: 2
         x: 64
@@ -579,14 +579,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62c3d061b451feba0800000000000000
-      internalID: -6057599561553331162
+      spriteID: 8e532532009569db0800000000000000
+      internalID: -4785539696907110936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_15
+      name: isometric-sandbox-normal-sheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -600,14 +600,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13e810ac2d74b70b0800000000000000
-      internalID: -5729907130241020367
+      spriteID: 4495c6f3d076c4ca0800000000000000
+      internalID: -6031332494359635644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_16
+      name: isometric-sandbox-normal-sheet_16
       rect:
         serializedVersion: 2
         x: 128
@@ -621,14 +621,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a3e2569935faf50800000000000000
-      internalID: 6894821472820148820
+      spriteID: 6dc1db27075f3cd10800000000000000
+      internalID: 2144827710868626646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_17
+      name: isometric-sandbox-normal-sheet_17
       rect:
         serializedVersion: 2
         x: 160
@@ -642,14 +642,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2813f38a0532fcc40800000000000000
-      internalID: 5534681296388698498
+      spriteID: 52d0e0882226c00a0800000000000000
+      internalID: -6914043427469521627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_18
+      name: isometric-sandbox-normal-sheet_18
       rect:
         serializedVersion: 2
         x: 0
@@ -663,14 +663,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8350dca91955c5dd0800000000000000
-      internalID: -2496026009614351048
+      spriteID: 7b4563ffa12428820800000000000000
+      internalID: 2918968192207836343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_19
+      name: isometric-sandbox-normal-sheet_19
       rect:
         serializedVersion: 2
         x: 32
@@ -684,14 +684,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db2d593df9baf3d0800000000000000
-      internalID: -3172018490288821287
+      spriteID: 83983c7d75125ccf0800000000000000
+      internalID: -232743144573925064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_20
+      name: isometric-sandbox-normal-sheet_20
       rect:
         serializedVersion: 2
         x: 64
@@ -705,14 +705,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dca2df44a26d13c0800000000000000
-      internalID: -4387242004135629611
+      spriteID: fa81637d16e46ee50800000000000000
+      internalID: 6838239266338117807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_21
+      name: isometric-sandbox-normal-sheet_21
       rect:
         serializedVersion: 2
         x: 96
@@ -726,14 +726,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f676135244f0c37a0800000000000000
-      internalID: -6396220585416759441
+      spriteID: 870777dd7b050dfe0800000000000000
+      internalID: -1166343552864128904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_22
+      name: isometric-sandbox-normal-sheet_22
       rect:
         serializedVersion: 2
         x: 128
@@ -747,14 +747,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55eec9f9534cbe00800000000000000
-      internalID: 1061797665874830684
+      spriteID: 1f68b107cf2d1a970800000000000000
+      internalID: 8764518331494139633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_23
+      name: isometric-sandbox-normal-sheet_23
       rect:
         serializedVersion: 2
         x: 160
@@ -768,14 +768,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2627c8f181bf19060800000000000000
-      internalID: 6958618980291211874
+      spriteID: d0f884af650ba69a0800000000000000
+      internalID: -6238980446155665651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_24
+      name: isometric-sandbox-normal-sheet_24
       rect:
         serializedVersion: 2
         x: 0
@@ -789,14 +789,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a24eea834621fa80800000000000000
-      internalID: -8434918555552693597
+      spriteID: 9fc481be1a15b01e0800000000000000
+      internalID: -2230599434556125959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_25
+      name: isometric-sandbox-normal-sheet_25
       rect:
         serializedVersion: 2
         x: 32
@@ -810,14 +810,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 101547beabd3d5250800000000000000
-      internalID: 5934967756967661825
+      spriteID: 67a88ec93b017a410800000000000000
+      internalID: 1488176565486914166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_26
+      name: isometric-sandbox-normal-sheet_26
       rect:
         serializedVersion: 2
         x: 64
@@ -831,14 +831,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def3a8913dae9a430800000000000000
-      internalID: 3794822353423843309
+      spriteID: 218487545f5dc6eb0800000000000000
+      internalID: -4725166659609278446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_27
+      name: isometric-sandbox-normal-sheet_27
       rect:
         serializedVersion: 2
         x: 96
@@ -852,14 +852,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7b5f6935b702cd0800000000000000
-      internalID: -2584930587165476914
+      spriteID: 2473e91f68e830600800000000000000
+      internalID: 433346699388139330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_28
+      name: isometric-sandbox-normal-sheet_28
       rect:
         serializedVersion: 2
         x: 128
@@ -873,14 +873,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28f8b76b169b08190800000000000000
-      internalID: -7962160311866519678
+      spriteID: fcae17d4aee8371b0800000000000000
+      internalID: -5660023169701778737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_29
+      name: isometric-sandbox-normal-sheet_29
       rect:
         serializedVersion: 2
         x: 160
@@ -894,14 +894,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2855ab6e5134bd530800000000000000
-      internalID: 3880769265254159746
+      spriteID: f8a95de5272367010800000000000000
+      internalID: 1186191018657421967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_30
+      name: isometric-sandbox-normal-sheet_30
       rect:
         serializedVersion: 2
         x: 128
@@ -915,14 +915,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 223c80601bb9c9c40800000000000000
-      internalID: 5520458427862139682
+      spriteID: d4e12382dd2f96ed0800000000000000
+      internalID: -2420136293058863539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_31
+      name: isometric-sandbox-normal-sheet_31
       rect:
         serializedVersion: 2
         x: 160
@@ -936,14 +936,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c13085406be700e0800000000000000
-      internalID: -2303613885661302336
+      spriteID: e16a18eeb68aca510800000000000000
+      internalID: 1561808352307160606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_32
+      name: isometric-sandbox-normal-sheet_32
       rect:
         serializedVersion: 2
         x: 0
@@ -957,14 +957,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a71fe0f2ae3b8b0800000000000000
-      internalID: -5137505262064535012
+      spriteID: ab40d334738d06740800000000000000
+      internalID: 5143348506319979706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_33
+      name: isometric-sandbox-normal-sheet_33
       rect:
         serializedVersion: 2
         x: 32
@@ -978,14 +978,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaaf7b77fbb5b3eb0800000000000000
-      internalID: -4739093304971887954
+      spriteID: 8369f94b6e00aa0a0800000000000000
+      internalID: -6869677290727434696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_34
+      name: isometric-sandbox-normal-sheet_34
       rect:
         serializedVersion: 2
         x: 64
@@ -999,14 +999,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb67be09c64cad070800000000000000
-      internalID: 8132028047737714363
+      spriteID: 74098bba92badb5e0800000000000000
+      internalID: -1892168072962731961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_35
+      name: isometric-sandbox-normal-sheet_35
       rect:
         serializedVersion: 2
         x: 96
@@ -1020,14 +1020,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8725ef103afaab10800000000000000
-      internalID: 1993680869665351562
+      spriteID: 00ad2e70f6708cd10800000000000000
+      internalID: 2145973395897113088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_36
+      name: isometric-sandbox-normal-sheet_36
       rect:
         serializedVersion: 2
         x: 128
@@ -1041,14 +1041,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f64a6095a76cd30800000000000000
-      internalID: 4451379804484431703
+      spriteID: ce007fa8c3147f0d0800000000000000
+      internalID: -3389168466287722260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_37
+      name: isometric-sandbox-normal-sheet_37
       rect:
         serializedVersion: 2
         x: 160
@@ -1062,14 +1062,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85891ed494b49d1e0800000000000000
-      internalID: -2172622567018227624
+      spriteID: ed4487b31d0cd2130800000000000000
+      internalID: 3543700486688883934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_38
+      name: isometric-sandbox-normal-sheet_38
       rect:
         serializedVersion: 2
         x: 0
@@ -1083,14 +1083,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 875f4ec94dab4d750800000000000000
-      internalID: 6328888798690473336
+      spriteID: c8f5b917a3a039a20800000000000000
+      internalID: 3067807017299828620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_39
+      name: isometric-sandbox-normal-sheet_39
       rect:
         serializedVersion: 2
         x: 32
@@ -1104,14 +1104,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4712be7740971d40800000000000000
-      internalID: 5555067302127474507
+      spriteID: 8523e59f62be47930800000000000000
+      internalID: 4140192510085313112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_40
+      name: isometric-sandbox-normal-sheet_40
       rect:
         serializedVersion: 2
         x: 64
@@ -1125,14 +1125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c51a32275f3a583f0800000000000000
-      internalID: -899132276013293220
+      spriteID: 445235b296252a530800000000000000
+      internalID: 3864742041889219908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_41
+      name: isometric-sandbox-normal-sheet_41
       rect:
         serializedVersion: 2
         x: 96
@@ -1146,14 +1146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 844948fcf1ca34780800000000000000
-      internalID: -8699920802524130232
+      spriteID: 01e9a71343486df10800000000000000
+      internalID: 2294166419895131664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_42
+      name: isometric-sandbox-normal-sheet_42
       rect:
         serializedVersion: 2
         x: 128
@@ -1167,14 +1167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9435ad69a6a7d4380800000000000000
-      internalID: -8985391083318258871
+      spriteID: 0644bf47d64296b60800000000000000
+      internalID: 7739757487145567328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_43
+      name: isometric-sandbox-normal-sheet_43
       rect:
         serializedVersion: 2
         x: 160
@@ -1188,14 +1188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dff2266e16a252e0800000000000000
-      internalID: -2138464223554764839
+      spriteID: 801783906d5c0dee0800000000000000
+      internalID: -1238272374458519288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_44
+      name: isometric-sandbox-normal-sheet_44
       rect:
         serializedVersion: 2
         x: 0
@@ -1209,14 +1209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ef15725fc031c660800000000000000
-      internalID: 7404252929373577187
+      spriteID: 5daa4e55106714440800000000000000
+      internalID: 4918342016173386453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_45
+      name: isometric-sandbox-normal-sheet_45
       rect:
         serializedVersion: 2
         x: 32
@@ -1230,14 +1230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2c5c88b1be7e780800000000000000
-      internalID: -8653689655477812521
+      spriteID: 228f81d7697ddbef0800000000000000
+      internalID: -90679376133687262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_46
+      name: isometric-sandbox-normal-sheet_46
       rect:
         serializedVersion: 2
         x: 128
@@ -1251,14 +1251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98858e8e02001ae20800000000000000
-      internalID: 3359966938341595273
+      spriteID: bbcca48cdf0fedbd0800000000000000
+      internalID: -2603378561795830597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isometric-sandbox-sheet_47
+      name: isometric-sandbox-normal-sheet_47
       rect:
         serializedVersion: 2
         x: 160
@@ -1272,8 +1272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60d3eb583bdc59c0800000000000000
-      internalID: -3937030939122347924
+      spriteID: ace3a0ffac5b3ff40800000000000000
+      internalID: 5761148231803879114
       vertices: []
       indices: 
       edges: []
@@ -1281,15 +1281,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 26474a2adbae4244d86610990661eeee
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: f9c572b8c3c24b24890a0a800478a5a4, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
