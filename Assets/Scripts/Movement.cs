@@ -20,7 +20,6 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Move(-1, 0, false);
@@ -33,17 +32,12 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Move(0, -1, false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
             Move(0, 1, false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(0, -1, false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(0, -1, false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -93,10 +87,4 @@ public class Movement : MonoBehaviour
 
         transform.position += offsetPosition;
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 }
