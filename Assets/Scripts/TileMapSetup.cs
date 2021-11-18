@@ -31,7 +31,7 @@ public class TileMapSetup : MonoBehaviour
             {
                 var tileSprite = tilemap.GetSprite(localPlace);
 
-                var baseTile = new BaseTile();
+                BaseTile baseTile = (BaseTile) ScriptableObject.CreateInstance("BaseTile");
                 baseTile.sprite = tileSprite;
 
                 bool isRamp = false;

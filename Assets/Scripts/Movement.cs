@@ -59,24 +59,29 @@ public class Movement : MonoBehaviour
 
     public void Move(Direction direction)
     {
+	Vector3Int originalTilePosition = tilePosition;
         Vector3 offsetPosition = new Vector3(0.5f, 0.25f, 0);
         switch (direction)
         {
             case Direction.None:
                 break;
             case Direction.UpRight:
+		Debug.Log("UpRight");
                 offsetPosition = new Vector3(0.5f, 0.25f, 0);
                 tilePosition.y++;
                 break;
             case Direction.UpLeft:
+		Debug.Log("UpLeft");
                 offsetPosition = new Vector3(-0.5f, 0.25f, 0);
                 tilePosition.x++;
                 break;
             case Direction.DownRight:
+		Debug.Log("DownRight");
                 offsetPosition = new Vector3(0.5f, -0.25f, 0);
                 tilePosition.x--;
                 break;
             case Direction.DownLeft:
+		Debug.Log("DownLeft");
                 offsetPosition = new Vector3(-0.5f, -0.25f, 0);
                 tilePosition.y--;
                 break;
@@ -220,12 +225,13 @@ public class Movement : MonoBehaviour
 
             if (aboveTile.isRamp)
             {
-                tilePosition.x += 1;
+		UnityEngine.Debug.Log("This tile is a ramp");
+                tilePosition.z += 1;
             }
             else
             {
                 //we cant move on this tile
-                tilePosition.x += 1;
+                tilePosition = originalTilePosition;
             }
 
             //end
@@ -237,7 +243,7 @@ public class Movement : MonoBehaviour
 
             if (belowTile.isRamp)
             {
-                tilePosition.x -= 1;
+                tilePosition.z -= 1;
             }
             else
             {
