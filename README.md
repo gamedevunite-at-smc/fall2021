@@ -19,3 +19,9 @@ Set-Location fall2021
 ```powershell
 & "C:\Program Files\Unity\path\to\executable\Unity.exe" -projectPath . -quit -batchmode -logfile Logs/AutomatedBuild.log -executeMethod 'GameBuilder.MyBuild'
 ```
+
+## Attributions
+
+- [Rogue knight](https://darkpixel-kronovi.itch.io/rogue-knight)
+
+> you can use this on any commercial or non-commercial project, credits are not required but it's so cool if you do.

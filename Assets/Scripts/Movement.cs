@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 {
 
     private new Transform transform;
-
+    private SpriteRenderer spriteRenderer;
     private Tilemap tileMap;
 
     private bool wasOnRamp = false;
@@ -25,28 +25,35 @@ public class Movement : MonoBehaviour
         tilePosition = tileMap.WorldToCell(transform.position);
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
+
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
+
             Move(Direction.UpLeft);
+
+
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Move(Direction.DownRight);
+
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Move(Direction.UpRight);
+
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Move(Direction.DownLeft);
+
         }
     }
 
