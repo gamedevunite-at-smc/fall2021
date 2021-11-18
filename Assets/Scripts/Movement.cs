@@ -68,22 +68,22 @@ public class Movement : MonoBehaviour
             case Direction.UpRight:
 		Debug.Log("UpRight");
                 offsetPosition = new Vector3(0.5f, 0.25f, 0);
-                tilePosition.y++;
+                tilePosition.x++;
                 break;
             case Direction.UpLeft:
 		Debug.Log("UpLeft");
                 offsetPosition = new Vector3(-0.5f, 0.25f, 0);
-                tilePosition.x++;
+                tilePosition.y++;
                 break;
             case Direction.DownRight:
 		Debug.Log("DownRight");
                 offsetPosition = new Vector3(0.5f, -0.25f, 0);
-                tilePosition.x--;
+                tilePosition.y--;
                 break;
             case Direction.DownLeft:
 		Debug.Log("DownLeft");
                 offsetPosition = new Vector3(-0.5f, -0.25f, 0);
-                tilePosition.y--;
+                tilePosition.x--;
                 break;
             default:
                 break;
