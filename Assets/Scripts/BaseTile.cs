@@ -6,17 +6,19 @@ using UnityEngine.Tilemaps;
 
 
 
+[System.Serializable]
+public enum Direction
+{
+    None, UpRight, UpLeft, DownRight, DownLeft
+}
+
 public class BaseTile : Tile
 {
 
     public bool isRamp;
 
-    public enum RampDirection 
-    { 
-        UpRight, UpLeft, DownRight, DownLeft
-    }
 
-    public RampDirection rampDirection;
+    public Direction rampDirection;
 
     //public void BaseTile(Tile tile)
     //{
