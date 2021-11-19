@@ -6,31 +6,32 @@ public class SpriteFlipper : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
 
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();    
     }
 
-    void Update()
+    public void Look(Direction direction)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        switch (direction)
         {
-            spriteRenderer.flipX = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            spriteRenderer.flipX = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            spriteRenderer.flipX = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            spriteRenderer.flipX = true;
+            case Direction.None:
+                break;
+            case Direction.UpRight:
+                spriteRenderer.flipX = false;
+                break;
+            case Direction.UpLeft:
+                spriteRenderer.flipX = true;
+                break;
+            case Direction.DownRight:
+                spriteRenderer.flipX = false;
+                break;
+            case Direction.DownLeft:
+                spriteRenderer.flipX = true;
+                break;
+            default:
+                break;
         }
     }
 }
