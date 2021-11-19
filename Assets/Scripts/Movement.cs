@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour
 {
 
     private new Transform transform;
-    private SpriteRenderer spriteRenderer;
     private Tilemap tileMap;
 
     private Vector3Int tilePosition;
@@ -22,7 +21,6 @@ public class Movement : MonoBehaviour
         tilePosition = tileMap.WorldToCell(transform.position);
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
-
     }
 
     private void Update()
@@ -48,9 +46,15 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //Maybe some information on the tile?
+    public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
+    public event OnMoveDelegate OnSuccessfullMove;
+    public event OnMoveDelegate OnFailedMove;
+
     public void Move(Direction direction)
     {
 	    Vector3Int originalTilePosition = tilePosition;
+
         switch (direction)
         {
             case Direction.None:
@@ -98,10 +102,7 @@ public class Movement : MonoBehaviour
                 //we cant move on this tile
                 tilePosition = originalTilePosition;
             }
-
-            //end
         } 
-        //Going down from base surfuse to a level lower
         else if (tileMap.HasTile(tilePosition))
         {
             var belowTile = tileMap.GetTile<BaseTile>(tilePosition);
@@ -111,16 +112,12 @@ public class Movement : MonoBehaviour
                 tilePosition.z -= 1;
                 onRamp = 1;
             }
-            else
-            {
-		        UnityEngine.Debug.Log("Hello");
-                //just moving forward on tile
-            }
         } 
         else if (!tileMap.HasTile(belowTilePosition))
         {
 		    //No tile under our feet. Can we do a fun animation here?
 		    tilePosition = originalTilePosition;
+            //We dont move dont call event
 	    }
 
         Vector3 offset = new Vector3(0.0f, 0.25f * tilePosition.z, 0.0f);
