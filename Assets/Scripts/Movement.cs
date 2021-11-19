@@ -19,7 +19,8 @@ public class Movement : MonoBehaviour
     void Start()
     {
         transform = GetComponent<Transform>();
-
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        // spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>(); // TODO: Performance
         tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
 
         tilePosition = tileMap.WorldToCell(transform.position);
@@ -34,26 +35,28 @@ public class Movement : MonoBehaviour
         {
 
             Move(Direction.UpLeft);
-
-
+            spriteRenderer.flipX = true;
+            Debug.Log("Alfa");
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Move(Direction.DownRight);
-
+            Debug.Log("Bravo");
+            spriteRenderer.flipX = false;
         }
+
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Move(Direction.UpRight);
-
+            spriteRenderer.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Move(Direction.DownLeft);
-
+            spriteRenderer.flipX = true;
         }
     }
 
