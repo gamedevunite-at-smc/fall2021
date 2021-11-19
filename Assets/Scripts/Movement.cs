@@ -7,16 +7,24 @@ using UnityEngine.Tilemaps;
 public class Movement : MonoBehaviour
 {
 
-    private new Transform transform;
     private Tilemap tileMap;
+
+    private new Transform transform;
 
     private Vector3Int tilePosition;
 
-    void Start()
+    //Maybe some more information from the tile?
+    public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
+    public event OnMoveDelegate OnMove;
+    public event OnMoveDelegate OnSuccessfulMove;
+    public event OnMoveDelegate OnFailedMove;
+
+    private enum MovementStatus { Sucessful, Failed }
+
+    private void Start()
     {
         transform = GetComponent<Transform>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        // spriteRenderer = GameObject.Find("Player").GetComponent<SpriteRenderer>(); // TODO: Performance
+
         tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
 
         tilePosition = tileMap.WorldToCell(transform.position);
@@ -24,61 +32,26 @@ public class Movement : MonoBehaviour
         tilePosition.z = 1;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Move(Direction.UpLeft);
-            spriteRenderer.flipX = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Move(Direction.DownRight);
-	    spriteRenderer.flipX = false;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Move(Direction.UpRight);
-            spriteRenderer.flipX = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(Direction.DownLeft);
-            spriteRenderer.flipX = true;
-        }
-    }
-
-    //Maybe some information on the tile?
-    public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
-    public event OnMoveDelegate OnSuccessfullMove;
-    public event OnMoveDelegate OnFailedMove;
-
     public void Move(Direction direction)
     {
-	    Vector3Int originalTilePosition = tilePosition;
+        MovementStatus movementStatus = MovementStatus.Sucessful;
+
+        Vector3Int originalTilePosition = tilePosition;
 
         switch (direction)
         {
             case Direction.None:
                 break;
             case Direction.UpRight:
-		        Debug.Log("UpRight");
                 tilePosition.x++;
                 break;
             case Direction.UpLeft:
-		        Debug.Log("UpLeft");
                 tilePosition.y++;
                 break;
             case Direction.DownRight:
-		        Debug.Log("DownRight");
                 tilePosition.y--;
                 break;
             case Direction.DownLeft:
-		        Debug.Log("DownLeft");
                 tilePosition.x--;
                 break;
             default:
@@ -107,6 +80,7 @@ public class Movement : MonoBehaviour
             {
                 //we cant move on this tile
                 tilePosition = originalTilePosition;
+                movementStatus = MovementStatus.Failed;
             }
         } 
         else if (tileMap.HasTile(tilePosition))
@@ -121,15 +95,34 @@ public class Movement : MonoBehaviour
         } 
         else if (!tileMap.HasTile(belowTilePosition))
         {
-		    //No tile under our feet. Can we do a fun animation here?
-		    tilePosition = originalTilePosition;
+            movementStatus = MovementStatus.Failed;
+            //No tile under our feet. Can we do a fun animation here?
+            tilePosition = originalTilePosition;
             //We dont move dont call event
 	    }
 
-        Vector3 offset = new Vector3(0.0f, 0.25f * tilePosition.z, 0.0f);
 
+        Vector3 offset = new Vector3(0.0f, 0.25f * tilePosition.z, 0.0f);
         offset.y += .25f * onRamp;
 
         transform.position = tileMap.GetCellCenterWorld(tilePosition) + offset;
+
+        switch (movementStatus)
+        {
+            case MovementStatus.Sucessful:
+
+                OnSuccessfulMove?.Invoke(direction, tilePosition);
+
+                break;
+            case MovementStatus.Failed:
+
+                OnFailedMove?.Invoke(direction, tilePosition);
+
+                break;
+            default:
+                break;
+        }
+
+        OnMove?.Invoke(direction, tilePosition);
     }
 }
