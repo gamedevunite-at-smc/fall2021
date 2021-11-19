@@ -11,84 +11,252 @@ public class Movement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Tilemap tileMap;
 
+    private bool wasOnRamp = false;
+    private Direction previousRampDirection;
+
+    private Vector3Int tilePosition;
+
     void Start()
     {
         transform = GetComponent<Transform>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        tileMap = GameObject.Find("TerrainMap").GetComponent<Tilemap>();
+
+        tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
+
+        tilePosition = tileMap.WorldToCell(transform.position);
+        transform.position = tileMap.CellToWorld(tilePosition);
+        tilePosition.z = 1;
+
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            spriteRenderer.flipX = true;
-            Move(-1, 0, false);
+
+            Move(Direction.UpLeft);
+
+
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            spriteRenderer.flipX = false;
-            Move(1, 0, false);
+            Move(Direction.DownRight);
+
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            spriteRenderer.flipX = true;
-            Move(0, -1, false);
+            Move(Direction.UpRight);
+
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            spriteRenderer.flipX = false;
-            Move(0, 1, false);
-        }
+            Move(Direction.DownLeft);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Move(0, -1, true);
         }
     }
 
-    //public void UploadData()
-    //{
-
-    //    var baseTile = new BaseTile();
-    //    baseTile.isRamp = false;
-    //    baseTile.rampDirection = BaseTile.RampDirection.UpRight;
-    //}
-
-    public void Move(int x, int y, bool isRamp, BaseTile.RampDirection rampDirection = BaseTile.RampDirection.UpRight)
+    public void Move(Direction direction)
     {
-
-        Vector3 offsetPosition = Vector3.zero;
-
-        offsetPosition += x * new Vector3(0.5f, 0.25f, 0);
-        offsetPosition += y * new Vector3(0.5f, -0.25f, 0);
-
-        var tile = tileMap.GetTile(tileMap.WorldToCell(transform.position + offsetPosition));
-
-        if (/*tile.isRamp*/isRamp)
+	Vector3Int originalTilePosition = tilePosition;
+        Vector3 offsetPosition = new Vector3(0.5f, 0.25f, 0);
+        switch (direction)
         {
-            switch (/*tile.*/rampDirection)
-            {
-                case BaseTile.RampDirection.UpRight:
-                    offsetPosition.y += 0.25f;
-                    break;
-                case BaseTile.RampDirection.UpLeft:
-                    offsetPosition.y -= 0.25f;
-                    break;
-                case BaseTile.RampDirection.DownRight:
-                    offsetPosition.y -= 0.25f;
-                    break;
-                case BaseTile.RampDirection.DownLeft:
-                    offsetPosition.y += 0.25f;
-                    break;
-                default:
-                    break;
-            }
+            case Direction.None:
+                break;
+            case Direction.UpRight:
+		Debug.Log("UpRight");
+                offsetPosition = new Vector3(0.5f, 0.25f, 0);
+                tilePosition.x++;
+                break;
+            case Direction.UpLeft:
+		Debug.Log("UpLeft");
+                offsetPosition = new Vector3(-0.5f, 0.25f, 0);
+                tilePosition.y++;
+                break;
+            case Direction.DownRight:
+		Debug.Log("DownRight");
+                offsetPosition = new Vector3(0.5f, -0.25f, 0);
+                tilePosition.y--;
+                break;
+            case Direction.DownLeft:
+		Debug.Log("DownLeft");
+                offsetPosition = new Vector3(-0.5f, -0.25f, 0);
+                tilePosition.x--;
+                break;
+            default:
+                break;
         }
 
-        transform.position += offsetPosition;
+        //Vector3Int playerCellPosition = tileMap.WorldToCell(tilePosition/*transform.position*/);
+
+        //UnityEngine.Debug.Log(playerCellPosition);
+
+        //var currentTile = (BaseTile)tileMap.GetTile(tilePosition);
+
+        //UnityEngine.Debug.Log(currentTile.isRamp);
+
+        //if (wasOnRamp)
+        //{
+
+
+        //    Vector2 rampOffset = new Vector2(0.0f, 0.25f);
+
+        //    switch (previousRampDirection)
+        //    {
+        //        case Direction.UpRight:
+
+        //            if (direction == Direction.DownLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.UpLeft:
+
+        //            if (direction == Direction.DownLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.DownRight:
+
+        //            rampOffset *= -1;
+
+        //            if (direction == Direction.UpLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.DownLeft:
+
+        //            rampOffset *= -1;
+
+        //            if (direction == Direction.UpRight)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        default:
+        //            break;
+        //    }
+
+        //    offsetPosition.x += rampOffset.x;
+        //    offsetPosition.y += rampOffset.y;
+
+        //    wasOnRamp = false;
+        //}
+
+        ////Vector3Int playerCellDestination = tileMap.WorldToCell(/*transform.position + offsetPosition*/);
+        //var tile = (BaseTile)tileMap.GetTile(tilePosition/*playerCellDestination*/);
+
+        //UnityEngine.Debug.Log(tilePosition);
+        //UnityEngine.Debug.Log("Tile is ramp: " + tile.isRamp);
+
+        //if (tile.isRamp)
+        //{
+
+        //    Vector2 rampOffset = new Vector2(0.0f, 0.25f);
+
+        //    switch (tile.rampDirection)
+        //    {
+        //        case Direction.UpRight:
+
+        //            if(direction == Direction.DownLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.UpLeft:
+
+        //            if (direction == Direction.DownLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.DownRight:
+
+        //            rampOffset *= -1;
+
+        //            if (direction == Direction.UpLeft)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        case Direction.DownLeft:
+
+        //            rampOffset *= -1;
+
+        //            if (direction == Direction.UpRight)
+        //            {
+        //                rampOffset *= -1;
+        //            }
+
+        //            break;
+        //        default:
+        //            break;
+        //    }
+
+        //    offsetPosition.x += rampOffset.x;
+        //    offsetPosition.y += rampOffset.y;
+
+        //    wasOnRamp = true;
+        //    previousRampDirection = tile.rampDirection;
+        //}
+
+        Vector3Int resultingTilePosition = tilePosition;
+
+        Vector3Int aboveTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z + 1);
+        Vector3Int belowTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z - 1);
+
+        //from base later to 1 layer up
+        if (tileMap.HasTile(aboveTilePosition))
+        {
+            UnityEngine.Debug.Log("There is a tile here");
+
+            var aboveTile = tileMap.GetTile<BaseTile>(aboveTilePosition);
+
+            if (aboveTile.isRamp)
+            {
+		        UnityEngine.Debug.Log("This tile is a ramp");
+                tilePosition.z += 1;
+            }
+            else
+            {
+                //we cant move on this tile
+                tilePosition = originalTilePosition;
+            }
+
+            //end
+        } 
+        //Going down from base surfuse to a level lower
+        else if (tileMap.HasTile(tilePosition))
+        {
+            var belowTile = tileMap.GetTile<BaseTile>(tilePosition);
+
+            if (belowTile.isRamp)
+            {
+                tilePosition.z -= 1;
+            }
+            else
+            {
+		        UnityEngine.Debug.Log("Hello");
+                //just moving forward on tile
+            }
+        } 
+        else if (!tileMap.HasTile(belowTilePosition))
+        {
+		    //No tile under our feet. Can we do a fun animation here?
+		    tilePosition = originalTilePosition;
+	    }
+
+        transform.position = tileMap.GetCellCenterWorld(tilePosition) + new Vector3(0.0f, 0.25f*tilePosition.z, 0.0f);
     }
 }
