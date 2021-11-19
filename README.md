@@ -14,6 +14,10 @@ Set-Location fall2021
 & "C:\Program Files\Unity\path\to\executable\Unity.exe" -projectPath .
 ```
 
+### Note
+
+This repository uses [Git LFS](https://git-lfs.github.com) to store large files. Make sure to use LFS or some of the repository's files may be corrupted on your disk.
+
 ## Automated Bulding
 
 ```powershell
