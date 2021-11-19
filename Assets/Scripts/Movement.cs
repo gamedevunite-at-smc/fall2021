@@ -247,10 +247,14 @@ public class Movement : MonoBehaviour
             }
             else
             {
+		UnityEngine.Debug.Log("Hello");
                 //just moving forward on tile
             }
-        }
+        } else if (!tileMap.HasTile(belowTilePosition)){
+		//No tile under our feet. Can we do a fun animation here?
+		tilePosition = originalTilePosition;
+	}
 
-        transform.position = tileMap.GetCellCenterWorld(tilePosition);
+        transform.position = tileMap.GetCellCenterWorld(tilePosition) + new Vector3(0.0f, 0.25f*tilePosition.z, 0.0f);
     }
 }
