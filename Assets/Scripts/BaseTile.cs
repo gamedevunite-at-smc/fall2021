@@ -6,12 +6,6 @@ using UnityEngine.Tilemaps;
 
 
 
-[System.Serializable]
-public enum Direction
-{
-    None, UpRight, UpLeft, DownRight, DownLeft
-}
-
 public class BaseTile : Tile
 {
 

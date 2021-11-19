@@ -225,7 +225,7 @@ public class Movement : MonoBehaviour
 
             if (aboveTile.isRamp)
             {
-		UnityEngine.Debug.Log("This tile is a ramp");
+		        UnityEngine.Debug.Log("This tile is a ramp");
                 tilePosition.z += 1;
             }
             else
@@ -247,13 +247,15 @@ public class Movement : MonoBehaviour
             }
             else
             {
-		UnityEngine.Debug.Log("Hello");
+		        UnityEngine.Debug.Log("Hello");
                 //just moving forward on tile
             }
-        } else if (!tileMap.HasTile(belowTilePosition)){
-		//No tile under our feet. Can we do a fun animation here?
-		tilePosition = originalTilePosition;
-	}
+        } 
+        else if (!tileMap.HasTile(belowTilePosition))
+        {
+		    //No tile under our feet. Can we do a fun animation here?
+		    tilePosition = originalTilePosition;
+	    }
 
         transform.position = tileMap.GetCellCenterWorld(tilePosition) + new Vector3(0.0f, 0.25f*tilePosition.z, 0.0f);
     }
