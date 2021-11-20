@@ -10,19 +10,24 @@ public class Movement : MonoBehaviour
     private new Transform transform;
     private SpriteRenderer spriteRenderer;
     private Tilemap tileMap;
+    private Camera c;
+    Vector3 cameraCenter;
 
     private Vector3Int tilePosition;
 
     void Start()
     {
         transform = GetComponent<Transform>();
-
+        
         tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
 
         tilePosition = tileMap.WorldToCell(transform.position);
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
 
+
+        c = GameObject.Find("Main Camera").GetComponent<Camera>();
+        cameraCenter = Vector3.zero;
     }
 
     private void Update()
@@ -128,5 +133,29 @@ public class Movement : MonoBehaviour
         offset.y += .25f * onRamp;
 
         transform.position = tileMap.GetCellCenterWorld(tilePosition) + offset;
+
+        //Move the camera
+        Vector3 diff = transform.position - cameraCenter;
+        if(diff.x > 6.0)
+        {
+            moveCamera(new Vector3(1.0f, 0.0f, 0.0f));
+        }else if(diff.x < -6.0)
+        {
+            moveCamera(new Vector3(-1.0f, 0.0f, 0.0f));
+        }
+
+        if(diff.y > 4.5)
+        {
+            moveCamera(new Vector3(0.0f, 1.0f, 0.0f));
+        }else if(diff.y < -4.5)
+        {
+            moveCamera(new Vector3(0.0f, -1.0f, 0.0f));
+        }
+    }
+
+    public void moveCamera(Vector3 v)
+    {
+        cameraCenter += v;
+        c.transform.Translate(v);
     }
 }
