@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,35 @@ public class Movement : MonoBehaviour
     private new Transform transform;
 
     private Vector3Int tilePosition;
+
+    private int direction;
+    /*
+     * This variable, and my idea of movement, explained
+     * 
+     * This variable stores the direction of movement
+     * 
+     * Last four bits
+     * XXYY
+     * 
+     * X bits - timer 0.75
+     * 01-- (decimal 5, 6, 7)       DownLeft
+     * 10-- (decimal 9, 10, 11)     None
+     * 11-- (decimal 13, 14, 15)    UpRight
+     * 
+     * Y bits - timer 1.5
+     * --01 (decimal 5, 9, 13)      DownRight
+     * --10 (decimal 6, 10, 14)     None
+     * --11 (decimal 7, 11, 15)     UpLeft
+     * 
+     * This is extremely janky
+     * 
+     */
+
+    //More variables for the movement system
+    private float moveTimer;
+    private bool halfSurpassed;
+    public float maxTime = 1.0f;
+    private float halfTime;
 
     //Maybe some more information from the tile?
     public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
@@ -30,6 +60,66 @@ public class Movement : MonoBehaviour
         tilePosition = tileMap.WorldToCell(transform.position);
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
+
+        direction = 0b1010; //Numbers preceded by 0b are in binary
+        moveTimer = 0.0f;
+        halfSurpassed = false;
+        halfTime = maxTime / 2;
+    }
+
+    private void Update()
+    {
+        int newDirection = Math.Sign(Input.GetAxis("Vertical")) + 2; //Set X bits
+        newDirection |= (Math.Sign(Input.GetAxis("Horizontal")) + 2) << 2;
+        Debug.Log(newDirection);
+        if(newDirection != direction)
+        {
+            //Reset the timer
+            direction = newDirection;
+            moveTimer = 0.0f;
+            halfSurpassed = false;
+        }
+        else
+        {
+            moveTimer += Time.deltaTime;
+        }
+
+        //Movement in the X Direction
+        if(moveTimer > halfTime && !halfSurpassed)
+        {
+            halfSurpassed = true;
+            //& is the bitwise and operator, which is different from the logical and operator. Basically, & filters out bits
+            switch(direction & 0b1100)
+            {
+                case 0b0100:
+                    Move(Direction.DownLeft);
+                    break;
+                case 0b1100:
+                    Move(Direction.UpRight);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        //Movement in the Y Direction
+        if(moveTimer > maxTime)
+        {
+            //Reset the timer
+            moveTimer = 0.0f;
+            halfSurpassed = false;
+            switch(direction & 0b0011)
+            {
+                case 0b0001:
+                    Move(Direction.DownRight);
+                    break;
+                case 0b0011:
+                    Move(Direction.UpLeft);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public void Move(Direction direction)
