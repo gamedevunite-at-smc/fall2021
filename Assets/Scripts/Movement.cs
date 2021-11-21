@@ -71,7 +71,7 @@ public class Movement : MonoBehaviour
     {
         int newDirection = Math.Sign(Input.GetAxis("Vertical")) + 2; //Set X bits
         newDirection |= (Math.Sign(Input.GetAxis("Horizontal")) + 2) << 2;
-        Debug.Log(newDirection);
+        //Debug.Log(newDirection);
         if(newDirection != direction)
         {
             //Reset the timer
@@ -97,6 +97,19 @@ public class Movement : MonoBehaviour
                 case 0b1100:
                     Move(Direction.UpRight);
                     break;
+                case 0b1000:
+                    switch(direction & 0b0011)
+                    {
+                        case 0b0001:
+                            Move(Direction.DownRight);
+                            break;
+                        case 0b0011:
+                            Move(Direction.UpLeft);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -116,9 +129,41 @@ public class Movement : MonoBehaviour
                 case 0b0011:
                     Move(Direction.UpLeft);
                     break;
+                case 0b0010:
+                    switch(direction & 0b1100)
+                    {
+                        case 0b0100:
+                            Move(Direction.DownLeft);
+                            break;
+                        case 0b1100:
+                            Move(Direction.UpRight);
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
+        }
+    }
+
+    public Direction OppositeDirection(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.None:
+                return Direction.None;
+            case Direction.UpRight:
+                return Direction.DownLeft;
+            case Direction.DownLeft:
+                return Direction.UpRight;
+            case Direction.UpLeft:
+                return Direction.DownRight;
+            case Direction.DownRight:
+                return Direction.UpLeft;
+            default:
+                return Direction.None;
         }
     }
 
@@ -168,9 +213,30 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                //we cant move on this tile
-                tilePosition = originalTilePosition;
-                movementStatus = MovementStatus.Failed;
+                Vector3Int positionAboveUs = new Vector3Int(originalTilePosition.x, originalTilePosition.y, originalTilePosition.z+1);
+                var tileAboveUs = tileMap.GetTile<BaseTile>(positionAboveUs);
+                //previousTile = null;
+                Debug.Log(tileAboveUs);
+                if (tileAboveUs != null)
+                {
+                    if (tileAboveUs.isRamp && tileAboveUs.rampDirection == direction)
+                    {
+                        tilePosition.z = originalTilePosition.z + 1;
+                        onRamp = 0;
+                    }
+                    else
+                    {
+                        //we cant move on this tile
+                        tilePosition = originalTilePosition;
+                        movementStatus = MovementStatus.Failed;
+                    }
+                }
+                else
+                {
+                    //we cant move on this tile
+                    tilePosition = originalTilePosition;
+                    movementStatus = MovementStatus.Failed;
+                }
             }
         } 
         else if (tileMap.HasTile(tilePosition))
@@ -179,23 +245,52 @@ public class Movement : MonoBehaviour
 
             if (belowTile.isRamp)
             {
-                tilePosition.z -= 1;
+                Debug.Log(belowTile.rampDirection);
+                tilePosition.z  -= 1;
                 onRamp = 1;
             }
         } 
         else if (!tileMap.HasTile(belowTilePosition))
         {
-            movementStatus = MovementStatus.Failed;
-            //No tile under our feet. Can we do a fun animation here?
-            tilePosition = originalTilePosition;
-            //We dont move dont call event
-	    }
+            //Vector3Int positionBelowUs = new Vector3Int(originalTilePosition.x, originalTilePosition.y, originalTilePosition.z - 1);
+
+            var tileBelowUs = tileMap.GetTile<BaseTile>(originalTilePosition);
+            
+            Debug.Log(originalTilePosition.z);
+            if (tileBelowUs != null)
+            {
+                if (tileBelowUs.isRamp && tileBelowUs.rampDirection == OppositeDirection(direction))
+                {
+                    tilePosition.z = originalTilePosition.z - 1;
+                    onRamp = 0;
+                }
+                else
+                {
+                    movementStatus = MovementStatus.Failed;
+                    //No tile under our feet. Can we do a fun animation here?
+                    tilePosition = originalTilePosition;
+                    //We dont move dont call event
+                }
+            }
+            else
+            {
+                movementStatus = MovementStatus.Failed;
+                //No tile under our feet. Can we do a fun animation here?
+                tilePosition = originalTilePosition;
+                //We dont move dont call event
+            }
+
+
+
+        }
 
 
         Vector3 offset = new Vector3(0.0f, 0.25f * tilePosition.z, 0.0f);
         offset.y += .25f * onRamp;
 
         transform.position = tileMap.GetCellCenterWorld(tilePosition) + offset;
+
+        Debug.Log(originalTilePosition.z);
 
         switch (movementStatus)
         {
