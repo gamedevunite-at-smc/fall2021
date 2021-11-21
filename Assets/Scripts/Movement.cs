@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,10 @@ public class Movement : MonoBehaviour
     private new Transform transform;
 
     private Vector3Int tilePosition;
+
+    private int moveTimer;
+
+    private Vector2Int direction;
 
     //Maybe some more information from the tile?
     public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
@@ -30,6 +35,41 @@ public class Movement : MonoBehaviour
         tilePosition = tileMap.WorldToCell(transform.position);
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
+        direction = new Vector2Int(0, 0);
+        moveTimer = 0;
+    }
+
+    private void Update()
+    {
+        //Is there already movement?
+        var newDirection = new Vector2Int(Math.Sign(Input.GetAxis("Horizontal")), Math.Sign(Input.GetAxis("Vertical")));
+        if(newDirection.x != direction.x)
+        {
+            //Reset the timer
+            direction.x = newDirection.x;
+            moveTimer = 0;
+        }
+        else
+        {
+            moveTimer++;
+        }
+        //Move timer resets every 60 frames.
+        if(moveTimer == 60)
+        {
+            //Reset the timer
+            moveTimer = 0;
+            switch (newDirection.x)
+            {
+                case 1:
+                    Move(Direction.UpRight);
+                    break;
+                case -1:
+                    Move(Direction.DownLeft);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public void Move(Direction direction)
