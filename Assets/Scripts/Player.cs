@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         spriteFlipper = GetComponentInChildren<SpriteFlipper>();
+        //movement.setZCoord(1);
     }
 
     private void Update()

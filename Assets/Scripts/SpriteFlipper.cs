@@ -9,7 +9,7 @@ public class SpriteFlipper : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();    
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();    
     }
 
     public void Look(Direction direction)

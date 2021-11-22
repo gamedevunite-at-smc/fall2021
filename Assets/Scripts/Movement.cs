@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     private Vector3Int tilePosition;
 
-    private int direction;
+    //private int direction;
     /*
      * This variable, and my idea of movement, explained
      * 
@@ -38,10 +38,10 @@ public class Movement : MonoBehaviour
      */
 
     //More variables for the movement system
-    private float moveTimer;
-    private bool halfSurpassed;
-    public float maxTime = 1.0f;
-    private float halfTime;
+    //private float moveTimer;
+    //private bool halfSurpassed;
+    //public float maxTime = 1.0f;
+    //private float halfTime;
 
     //Maybe some more information from the tile?
     public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);
@@ -54,6 +54,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         transform = GetComponent<Transform>();
+        Debug.Log("Hello");
 
         tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
 
@@ -61,12 +62,17 @@ public class Movement : MonoBehaviour
         transform.position = tileMap.CellToWorld(tilePosition);
         tilePosition.z = 1;
 
-        direction = 0b1010; //Numbers preceded by 0b are in binary
-        moveTimer = 0.0f;
-        halfSurpassed = false;
-        halfTime = maxTime / 2;
+        //direction = 0b1010; //Numbers preceded by 0b are in binary
+        //moveTimer = 0.0f;
+        //halfSurpassed = false;
+        //halfTime = maxTime / 2;
     }
 
+    public void setZCoord(int z)
+    {
+        tilePosition.z = z;
+    }
+    /*
     private void Update()
     {
         int newDirection = Math.Sign(Input.GetAxis("Vertical")) + 2; //Set X bits
@@ -147,6 +153,7 @@ public class Movement : MonoBehaviour
             }
         }
     }
+    */
 
     public Direction OppositeDirection(Direction direction)
     {
