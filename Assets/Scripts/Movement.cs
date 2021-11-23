@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
 
     private new Transform transform;
 
-    private Vector3Int tilePosition;
+    public Vector3Int tilePosition;
 
     //Maybe some more information from the tile?
     public delegate void OnMoveDelegate(Direction direction, Vector3Int cellPosition);

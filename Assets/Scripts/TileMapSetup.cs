@@ -18,7 +18,7 @@ public class TileMapSetup : MonoBehaviour
     private Tilemap tilemap;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         tilemap = GetComponent<Tilemap>();
 
