@@ -23,6 +23,8 @@ public class AStar : MonoBehaviour
 		{
 			if (tilemap.HasTile(position))
 			{
+				UnityEngine.Debug.Log(position);
+
 				Node node = new Node();
 				node.cellPosition = position;
 				nodes.Add(node);
@@ -51,24 +53,31 @@ public class AStar : MonoBehaviour
 
 		Node node;
 
-		GetNode(new Vector3Int(position.x + 1, position.y, position.z));
-		GetNode(new Vector3Int(position.x - 1, position.y, position.z));
-		GetNode(new Vector3Int(position.x, position.y + 1, position.z));
-		GetNode(new Vector3Int(position.x, position.y - 1, position.z));
+		var tile = tilemap.GetTile<BaseTile>(position);
 
-		void GetNode(Vector3Int position)
+		GetNode(new Vector3Int(position.x + 1, position.y, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x - 1, position.y, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x, position.y + 1, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x, position.y - 1, position.z), tile.isRamp);
+
+		void GetNode(Vector3Int position, bool canCheckLower)
         {
+			//Check from top to bottom. If there is a tile on the top then we cannot even do the others
 			if (positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z + 2), out node))
 			{
-				UnityEngine.Debug.Log("There is a tile above me");
 				if (tilemap.GetTile<BaseTile>(new Vector3Int(position.x, position.y, position.z + 2)).isRamp)
                 {
 					neighbourNodes.Add(node);
-					UnityEngine.Debug.Log("I am connected to a ramp");
 				}
 			}
+			//Check if there is a normal level tile in front of us
 			else if (positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z), out node))
 			{
+				neighbourNodes.Add(node);
+			}
+			//If we can check a level below, then check lol
+			else if (canCheckLower && positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z - 1), out node))
+            {
 				neighbourNodes.Add(node);
 			}
 		}
@@ -83,10 +92,16 @@ public class AStar : MonoBehaviour
         Node endNode;
 
         if (!positionToNode.TryGetValue(start, out startNode))
-            return null;
+        {
+			UnityEngine.Debug.Log("I CANT FIND THE START POINT!");
+			return null;
+		}
 
         if (!positionToNode.TryGetValue(end, out endNode))
-            return null;
+		{
+			UnityEngine.Debug.Log("I CANT FIND THE END POINT!");
+			return null;
+		}
 
 		openSet.Clear();
 		closedSet.Clear();
@@ -149,6 +164,9 @@ public class AStar : MonoBehaviour
 			retracedPath.Add(currentNode);
 			currentNode = currentNode.parent;
 		}
+
+		retracedPath.Add(startNode);
+
 		retracedPath.Reverse();
 	}
 

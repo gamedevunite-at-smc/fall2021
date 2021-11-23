@@ -49,7 +49,7 @@ public class AStarTest : MonoBehaviour
 
                 for (int i = 1; i < path.Length; i++)
                 {
-                    Gizmos.DrawLine(tileMap.GetCellCenterWorld(path[i - 1]) + new Vector3Int(1, 1, 0), tileMap.GetCellCenterWorld(path[i]) + new Vector3Int(1, 1, 0));
+                    Gizmos.DrawLine(tileMap.GetCellCenterWorld(path[i - 1]), tileMap.GetCellCenterWorld(path[i]));
                 }
             }
             else

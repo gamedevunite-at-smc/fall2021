@@ -28,8 +28,7 @@ public class Movement : MonoBehaviour
         tileMap = GameObject.Find("TestMap").GetComponent<Tilemap>();
 
         tilePosition = tileMap.WorldToCell(transform.position);
-        transform.position = tileMap.CellToWorld(tilePosition);
-        tilePosition.z = 1;
+        transform.position = tileMap.GetCellCenterWorld(tilePosition);
     }
 
     public void Move(Direction direction)
@@ -58,8 +57,8 @@ public class Movement : MonoBehaviour
                 break;
         }
 
-        Vector3Int aboveTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z + 1);
-        Vector3Int belowTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z - 1);
+        Vector3Int aboveTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z + 2);
+        Vector3Int belowTilePosition = new Vector3Int(tilePosition.x, tilePosition.y, tilePosition.z - 2);
 
         int onRamp = 0;
 
@@ -73,7 +72,7 @@ public class Movement : MonoBehaviour
             if (aboveTile.isRamp)
             {
 		        UnityEngine.Debug.Log("This tile is a ramp");
-                tilePosition.z += 1;
+                tilePosition.z += 2;
                 onRamp = -1;
             }
             else
@@ -89,7 +88,7 @@ public class Movement : MonoBehaviour
 
             if (belowTile.isRamp)
             {
-                tilePosition.z -= 1;
+                tilePosition.z -= 2;
                 onRamp = 1;
             }
         } 
