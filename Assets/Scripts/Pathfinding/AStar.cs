@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
 public class AStar : MonoBehaviour
 {
 
@@ -63,9 +64,9 @@ public class AStar : MonoBehaviour
 		void GetNode(Vector3Int position, bool canCheckLower)
         {
 			//Check from top to bottom. If there is a tile on the top then we cannot even do the others
-			if (positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z + 2), out node))
+			if (positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z + 1), out node))
 			{
-				if (tilemap.GetTile<BaseTile>(new Vector3Int(position.x, position.y, position.z + 2)).isRamp)
+				if (tilemap.GetTile<BaseTile>(new Vector3Int(position.x, position.y, position.z + 1)).isRamp)
                 {
 					neighbourNodes.Add(node);
 				}

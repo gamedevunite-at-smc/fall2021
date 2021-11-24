@@ -22,8 +22,10 @@ public class AStarTest : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Hello");
         aStar = GetComponent<AStar>();
         tileMap = GetComponent<Tilemap>();
+
 
         //to = AStar.GetRandomNode();
         //from = AStar.GetRandomNode();
@@ -40,6 +42,7 @@ public class AStarTest : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        //aStar.sayHello();
         if(startMovement != null && endMovement != null && tileMap != null)
         {
             var path = AStar.FindPath(startMovement.tilePosition, endMovement.tilePosition/*tileMap.WorldToCell(from), tileMap.WorldToCell(to)*/);
