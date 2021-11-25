@@ -23,7 +23,7 @@ public class AStar : MonoBehaviour
 		{
 			if (tilemap.HasTile(position))
 			{
-				UnityEngine.Debug.Log(position);
+				//UnityEngine.Debug.Log(position);
 
 				Node node = new Node();
 				node.cellPosition = position;
@@ -76,7 +76,7 @@ public class AStar : MonoBehaviour
 				neighbourNodes.Add(node);
 			}
 			//If we can check a level below, then check lol
-			else if (canCheckLower && positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z - 1), out node))
+			else if (canCheckLower && positionToNode.TryGetValue(new Vector3Int(position.x, position.y, position.z - 2), out node))
             {
 				neighbourNodes.Add(node);
 			}
@@ -172,8 +172,13 @@ public class AStar : MonoBehaviour
 
 	private static int GetDistance(Node nodeA, Node nodeB)
 	{
-		int dstX = Mathf.Abs(nodeA.cellPosition.x - nodeB.cellPosition.x);
-		int dstY = Mathf.Abs(nodeA.cellPosition.y - nodeB.cellPosition.y);
+		//This doesnt necessarily pull the correct results
+
+		Vector2Int cellAPosition = new Vector2Int(nodeA.cellPosition.x, nodeA.cellPosition.y/* + (int)(nodeA.cellPosition.z / 2)*/);
+		Vector2Int cellBPosition = new Vector2Int(nodeB.cellPosition.x, nodeB.cellPosition.y/* + (int)(nodeB.cellPosition.z / 2)*/);
+
+		int dstX = Mathf.Abs(cellAPosition.x - cellBPosition.x);
+		int dstY = Mathf.Abs(cellAPosition.y - cellBPosition.y);
 
 		if (dstX > dstY)
 			return 14 * dstY + 10 * (dstX - dstY);

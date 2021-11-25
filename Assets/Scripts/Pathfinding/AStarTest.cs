@@ -49,7 +49,11 @@ public class AStarTest : MonoBehaviour
 
                 for (int i = 1; i < path.Length; i++)
                 {
-                    Gizmos.DrawLine(tileMap.GetCellCenterWorld(path[i - 1]), tileMap.GetCellCenterWorld(path[i]));
+                    Vector3 offset = new Vector3(0.0f, 0.25f * path[i - 1].z, 0.0f);
+
+                    Vector3 offset2 = new Vector3(0.0f, 0.25f * path[i].z, 0.0f);
+
+                    Gizmos.DrawLine(tileMap.GetCellCenterWorld(path[i - 1]) + offset, tileMap.GetCellCenterWorld(path[i]) + offset2);
                 }
             }
             else
@@ -59,7 +63,7 @@ public class AStarTest : MonoBehaviour
             }
         }
 
-        if (showConnections)
+        if (showConnections && Application.isPlaying)
         {
             for (int i = 0; i < AStar.nodes.Count; i++)
             {
