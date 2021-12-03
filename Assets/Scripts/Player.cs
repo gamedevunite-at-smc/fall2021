@@ -5,13 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private Movement movement;
+    private Movement _movement;
+    public Movement movement => _movement;
 
     private SpriteFlipper spriteFlipper;
 
     private void Awake()
     {
-        movement = GetComponent<Movement>();
+        _movement = GetComponent<Movement>();
         spriteFlipper = GetComponentInChildren<SpriteFlipper>();
     }
 
@@ -19,25 +20,25 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            movement.Move(Direction.UpLeft);
+            _movement.Move(Direction.UpLeft);
             spriteFlipper.Look(Direction.UpLeft);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            movement.Move(Direction.DownRight);
+            _movement.Move(Direction.DownRight);
             spriteFlipper.Look(Direction.DownRight);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            movement.Move(Direction.UpRight);
+            _movement.Move(Direction.UpRight);
             spriteFlipper.Look(Direction.UpRight);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            movement.Move(Direction.DownLeft);
+            _movement.Move(Direction.DownLeft);
             spriteFlipper.Look(Direction.DownLeft);
         }
     }

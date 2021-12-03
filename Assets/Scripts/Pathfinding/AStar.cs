@@ -60,6 +60,11 @@ public class AStar : MonoBehaviour
 		GetNode(new Vector3Int(position.x, position.y + 1, position.z), tile.isRamp);
 		GetNode(new Vector3Int(position.x, position.y - 1, position.z), tile.isRamp);
 
+		GetNode(new Vector3Int(position.x + 1, position.y + 1, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x - 1, position.y + 1, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x + 1, position.y - 1, position.z), tile.isRamp);
+		GetNode(new Vector3Int(position.x - 1, position.y - 1, position.z), tile.isRamp);
+
 		void GetNode(Vector3Int position, bool canCheckLower)
         {
 			//Check from top to bottom. If there is a tile on the top then we cannot even do the others
